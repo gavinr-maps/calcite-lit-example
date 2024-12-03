@@ -14,6 +14,9 @@ setAssetPath(
   'https://unpkg.com/@esri/calcite-components@3.0.0-next.45/dist/calcite/assets/'
 );
 
+// import for each component you are using:
+import '@esri/calcite-components/dist/components/calcite-button';
+
 /**
  * An example element.
  *
@@ -47,7 +50,7 @@ export class MyElement extends LitElement {
   override render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
-      <calcite-button @click=${this._onClick} appearance="outline">
+      <calcite-button @click=${this._onClick} appearance="solid">
         Click Count: ${this.count}
       </calcite-button>
       <slot></slot>
