@@ -22,18 +22,17 @@ import '@esri/calcite-components/dist/components/calcite-button';
  *
  * @fires count-changed - Indicates when the count changes
  * @slot - This element has a slot
- * @csspart button - The button
  */
 @customElement('my-element')
 export class MyElement extends LitElement {
-  static override styles = css`
-    :host {
-      display: block;
-      border: solid 1px gray;
-      padding: 16px;
-      max-width: 800px;
-    }
-  `;
+  // static override styles = css`
+  //   :host {
+  //     display: block;
+  //     border: solid 1px gray;
+  //     padding: 16px;
+  //     max-width: 800px;
+  //   }
+  // `;
 
   /**
    * The name to say "Hello" to.
@@ -49,6 +48,12 @@ export class MyElement extends LitElement {
 
   override render() {
     return html`
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://unpkg.com/@esri/calcite-components@3.0.0-next.45/dist/calcite/calcite.css"
+      />
+
       <h1>${this.sayHello(this.name)}!</h1>
       <calcite-button @click=${this._onClick} appearance="solid">
         Click Count: ${this.count}
