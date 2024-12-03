@@ -7,6 +7,13 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
+// Load Calcite:
+import {setAssetPath} from '@esri/calcite-components/dist/components';
+// CDN hosted assets
+setAssetPath(
+  'https://unpkg.com/@esri/calcite-components@3.0.0-next.45/dist/calcite/assets/'
+);
+
 /**
  * An example element.
  *
@@ -40,9 +47,9 @@ export class MyElement extends LitElement {
   override render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
-      <button @click=${this._onClick} part="button">
+      <calcite-button @click=${this._onClick} appearance="outline">
         Click Count: ${this.count}
-      </button>
+      </calcite-button>
       <slot></slot>
     `;
   }
