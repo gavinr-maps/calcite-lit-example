@@ -11,7 +11,7 @@ import {customElement, property} from 'lit/decorators.js';
 import {setAssetPath} from '@esri/calcite-components/dist/components';
 // CDN hosted assets
 setAssetPath(
-  'https://unpkg.com/@esri/calcite-components@3.0.0-next.45/dist/calcite/assets/'
+  'https://unpkg.com/@esri/calcite-components@3.0.0-next.45/dist/calcite/'
 );
 
 // import for each component you are using:
